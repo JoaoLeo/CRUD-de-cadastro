@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Edição de usuario </title>
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body>
+    <form method="POST"action="/salvarEdicao" >
+        <h1> Criação de usuário </h1>
+        <hr> <br> <br>
+        <div class="formdiv"> 
+        Nome: <input type="text" name="nome" id="nome" value ="<%=user.nome%>"> 
+        Email: <input type="email" name="email" id ="email" value="<%=user.email%>"> 
+        Idade: <input type="number" name="idade" id="idade" value="<%=user.idade%>"> <br> <br> <br> <br>
+        <input type="hidden" name="id" value="<%=user.id%>">
+        <button type="submit" class="btnCreate"> Editar </button>
+
+        </div>
+    </form>
+</body>
+</html>

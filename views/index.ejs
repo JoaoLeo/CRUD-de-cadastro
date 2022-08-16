@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUD de cadastro </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h2> Listagem de usuários </h2>
+    <hr>
+    <div  class="listagemUsers"> 
+   
+    <table class="tabela"> 
+          
+                    <td> Nome  </td>
+                    <td> Opções </td>
+                    
+            <tr> 
+           
+                <% users.forEach(user => {  %>
+                <th>
+                     <%= user.nome%>  
+
+                
+                <th>
+                    <a href="/editarUser/<%=user.id%>"> <button class="btnMenu"> Editar </button> </a>
+                    <a href="/informacoesUser/<%=user.id%>"> <button class="btnMenu"> Detalhes </button> </a>
+                    
+                    <form method="POST" action="/deletarUser" style="display:inline ;" onsubmit="confirmarDelete(event,this)"> 
+                        <input type="hidden" name="id" value="<%= user.id %>">
+                    
+                    <button class="btnMenu"> Deletar </button>
+                    </form>
+                </th>
+            </tr>
+
+        
+
+        
+        <% }) %>
+    </table>
+    <br>
+    <a href="/cadastrarUser"> <button class="btnCadastrar"> Cadastrar novo usuário</button> </a>
+    </div>
+</body>
+<script>
+    function confirmarDelete(event,form){
+        event.preventDefault()
+        var option = confirm("Deseja deletar esse usuário?")
+        if(option){
+            form.submit()
+        }
+    }
+</script>
+</html>
