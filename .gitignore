@@ -4,4 +4,4 @@ public
 
 package-lock.json
 
-./db/db.js
+db/db.js
