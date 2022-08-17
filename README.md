@@ -1,4 +1,4 @@
-# CRUD-de-cadastro
+# CRUD-de-Cadastro
 Um crud simples de cadastro de usuários.
 
 # O sistema se baseia nas 4 operações básicas de um banco de dados: Create, Read, Update e Delete.
@@ -19,12 +19,12 @@ e o campo de idade não aceita números abaixo de 0.
 5. Botão de deleção - "/deletarUser" - POST
 
 # Tecnologias utilizadas:
-Node.js - Linguagem de programação principal.
-Express.js - Framework utilizado para criação do servidor, funcionalidade e das rotas.
-Sequelize - Biblioteca para manipulação de banco de dados.
-MySQL - Banco de dados utilizado.
-Body-parser - Biblioteca que pega dados para a requisição e envia para o backend.
-EJS - View engine utilizada renderização do frontend.
+1. Node.js - Linguagem de programação principal.
+2. Express.js - Framework utilizado para criação do servidor, funcionalidade e das rotas.
+3. Sequelize - Biblioteca para manipulação de banco de dados.
+4. MySQL - Banco de dados utilizado.
+5. Body-parser - Biblioteca que pega dados para a requisição e envia para o backend.
+6. EJS - View engine utilizada renderização do frontend.
 
 # Considerações finais: 
 - Esse sistema foi construído por um iniciante no desenvolvimento de backend, criei ele com projeto pessoal para testar meu conhecimento e minha capacidade de pesquisar 
